@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="appframework/css/af.ui.base.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+
+    <script src="cordova.js" type="text/javascript"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="appframework/jq.appframework.js" type="text/javascript"></script>
+    <script src="appframework/appframework.ui.plugins.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      $.ui.autoLaunch = false;
+      $.ui.showBackButton = false;
+      $.ui.selectBox = false;
+      var init = function () {
+          $.ui.launch();
+      };
+      document.addEventListener("DOMContentLoaded", init, false);
+      $.ui.ready(function () {
+          //This function will get executed when $.ui.launch has completed
+          $.ui.blockPageScroll();
+      });
+    </script>
+    <title>Multiselect</title>
+  </head>
+  <body>
+    <div id="afui">      
+      <div id="content">
+        <div title="Multiselect" id="reportPage" class="panel">
+          <form>
+            <select class="span12"  multiple="multiple" style="">
+                <option value="" selected>Select</option>                              
+                <option value="item1">Item 1</option>                              
+                <option value="item2">Item 2</option>                              
+                <option value="item3">Item 3</option>                              
+                <option value="item4">Item 4</option>                              
+                <option value="item5">Item 5</option>                              
+                <option value="item6">Item 6</option>                              
+                <option value="item7">Item 7</option>                              
+            </select>
+          </form>
+        </div><!-- /reportPage -->
+      </div><!-- /content -->
+    </div>  
+  </body>
+</html>
